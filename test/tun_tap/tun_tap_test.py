@@ -7,8 +7,6 @@ import struct
 import select
 import os
 import sys
-
-import sys
 if sys.version_info[0] >= 3:
     unicode = str
 
