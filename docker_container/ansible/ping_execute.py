@@ -40,7 +40,7 @@ def main():
                 result.append(a)
         cur_robotlist =[]
         for i in robot_filter:
-            a = re.findall('\[[^\]]*\]', i)[0][1:-1]
+            a = re.findall(r'\[[^\]]*\]', i)[0][1:-1]
             #print(a)
             cur_robotlist.append(a)
 
