@@ -123,7 +123,7 @@ def topology(args):
     net = Mininet_wifi(link=wmediumd, wmediumd_mode=interference)
 
     info("*** Creating nodes\n")
-    kwargs = dict()
+    kwargs = {}
     if '-a' in args:
         kwargs['range'] = 100
 

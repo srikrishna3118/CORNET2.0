@@ -51,7 +51,7 @@ def myNetwork():
 
     #net.startMobility(time=0, mob_rep=1, reverse=False)
 
-    p1, p2 = dict(), dict()
+    p1, p2 = {}, {}
 
 
     #p1 = {'position': '250.0,400.0,0.0'}
