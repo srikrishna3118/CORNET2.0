@@ -24,7 +24,7 @@ def topology(args):
     #               position='400,500,0')
     h1 = net.addHost('h1', ip='10.0.0.2/8')
     #c1 = net.addController('c1')
-    
+
     #info("*** Configuring propagation model\n")
     net.setPropagationModel(model="logDistance", exp=4.5)
 
