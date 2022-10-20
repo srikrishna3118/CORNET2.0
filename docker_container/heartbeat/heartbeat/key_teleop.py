@@ -58,7 +58,8 @@ from std_msgs.msg import Header
 class Velocity(object):
 
     def __init__(self, min_velocity, max_velocity, num_steps):
-        assert min_velocity > 0 and max_velocity > 0 and num_steps > 0
+        if not (min_velocity > 0 and max_velocity > 0 and num_steps > 0):
+            raise AssertionError
         self._min = min_velocity
         self._max = max_velocity
         self._num_steps = num_steps
@@ -77,7 +78,8 @@ class Velocity(object):
         if step == 0:
             return 0
 
-        assert step > 0 and step <= self._num_steps
+        if not (step > 0 and step <= self._num_steps):
+            raise AssertionError
         max_value = self._min + self._step_incr * (step - 1)
         return value * max_value
 
