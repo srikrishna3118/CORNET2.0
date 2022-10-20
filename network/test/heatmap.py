@@ -9,14 +9,9 @@ from mn_wifi.telemetry import util_dir
 from mn_wifi.node import AP
 from mn_wifi.link import wmediumd
 from mn_wifi.wmediumdConnector import interference
-from mn_wifi.telemetry import util_dir
-from mn_wifi.node import AP
-import sys
 import os
 import yaml
 import time
-from mn_wifi.link import wmediumd
-from mn_wifi.wmediumdConnector import interference
 start = time.time()
 from threading import Thread as thread
 
