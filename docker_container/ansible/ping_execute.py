@@ -46,8 +46,8 @@ def main():
 
         output = {'allpings': []}
         #for val in result:
-        for i in range(len(result)) :
-            temp = {'ping': result[i], 'robot_id': robots.index(cur_robotlist[i])}
+        for i, item in enumerate(result) :
+            temp = {'ping': item, 'robot_id': robots.index(cur_robotlist[i])}
             output['allpings'] += [temp]
         output = str(output)
         output = output.replace("'","")
