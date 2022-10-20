@@ -28,7 +28,7 @@ def topology(args):
                            controller=Controller,
                            protocol='tcp',
                            port=6633)
-    
+
     #info("*** Configuring propagation model\n")
     #net.setPropagationModel(model="logDistance", exp=2)
 
