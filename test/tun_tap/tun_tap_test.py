@@ -1,7 +1,7 @@
 #!/usr/bin/python2
 import subprocess
 
-import ipaddress as ipaddress
+import ipaddress
 import fcntl
 import struct
 import select
@@ -10,7 +10,7 @@ import sys
 if sys.version_info[0] >= 3:
     unicode = str
 
-import multiprocessing as multiprocessing
+import multiprocessing
 import threading
 #import dpkt
 #from scapy.all import *
