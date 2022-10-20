@@ -27,7 +27,6 @@ class MinimalSubscriber(Node):
             '/heartbeat',
             self.listener_callback,
             10)
-        self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
 
