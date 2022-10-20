@@ -17,7 +17,6 @@ def client(msg):
         data = s.recv(1024).decode('utf-8')
         print('Received from Server: ', data)
         return data
-        s.close()
 
 if __name__ == '__main__':
     # get the postion of AP1
