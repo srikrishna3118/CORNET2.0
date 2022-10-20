@@ -17,9 +17,6 @@ start = time.time()
 
 
 class Topology_MN(Topo):
-    def __init__(self, *args, **params):
-        super(Topology_MN, self).__init__(*args, **params)
-        # Topo.__init__(self, *args, **params)
 
     def build(self, config_file):
         with open(config_file) as f:
