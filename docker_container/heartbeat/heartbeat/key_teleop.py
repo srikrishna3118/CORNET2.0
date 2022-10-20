@@ -130,7 +130,8 @@ class TextWindow():
             self._screen.addstr(int(y), int(x), text, curses.A_BLINK)
             y += 1
 
-    def beep(self):
+    @staticmethod
+    def beep():
         curses.flash()
 
 
@@ -166,7 +167,8 @@ class SimpleKeyTeleop(Node):
         curses.KEY_RIGHT: (0, -1),
     }
 
-    def pingOk(self, sHost):
+    @staticmethod
+    def pingOk(sHost):
         try:
             output = subprocess.check_output(
                 "ping -{} 1 {}".format('n' if platform.system().lower() == "windows" else 'c', sHost), shell=True)
@@ -237,13 +239,15 @@ class SimpleKeyTeleop(Node):
             # TODO(artivis) use Rate once available
             time.sleep(1.0 / self._hz)
 
-    def _make_twist(self, linear, angular):
+    @staticmethod
+    def _make_twist(linear, angular):
         twist = Twist()
         twist.linear.x = linear
         twist.angular.z = angular
         return twist
 
-    def _make_twist_stamped(self, linear, angular):
+    @staticmethod
+    def _make_twist_stamped(linear, angular):
         twist_stamped = TwistStamped()
         header = Header()
         header.stamp = rclpy.clock.Clock().now().to_msg()

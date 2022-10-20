@@ -76,7 +76,8 @@ class Stats:
         ifaces = cls.get_ifaces(nodes, inNamespaceNodes, phy_list)
         return phy_list, ifaces
 
-    def get_ping(self, node):
+    @staticmethod
+    def get_ping(node):
         cmd = '~/ping_s.sh 10.0.0.1'
         isAP = False
 

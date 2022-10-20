@@ -26,7 +26,8 @@ class GzClient:
         self.port = 12345
         self.msg = ["set.","station",".setPosition","(", "\"", "'", "xPosition", ",", "yPosition", ",", "zPosition", "\"", ")", "'"]
 
-    def system_call(self, cmd):
+    @staticmethod
+    def system_call(cmd):
         """
         params:
             command: list of strings, ex. `["ls", "-l"]`
