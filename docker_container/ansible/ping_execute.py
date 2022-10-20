@@ -44,13 +44,10 @@ def main():
             #print(a)
             cur_robotlist.append(a)
 
-        output = {}
-        output['allpings'] = []
+        output = {'allpings': []}
         #for val in result:
         for i in range(len(result)) :
-            temp = {}
-            temp['ping'] = result[i]
-            temp['robot_id'] = robots.index(cur_robotlist[i])
+            temp = {'ping': result[i], 'robot_id': robots.index(cur_robotlist[i])}
             output['allpings'] += [temp]
         output = str(output)
         output = output.replace("'","")
