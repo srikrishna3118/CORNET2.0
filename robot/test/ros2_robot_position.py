@@ -35,7 +35,8 @@ class RclpyClient(Node):
         self.request.name = model_name
         self.response = self.cli.call_async(self.request)
 
-    def client(self, msg):
+    @staticmethod
+    def client(msg):
         host = '127.0.0.1'
         port = 12345
         # while msg != 'q' and msg != 'exit':
