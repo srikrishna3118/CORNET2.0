@@ -19,7 +19,7 @@ def startNAT(root, inetIntf, subnet='10.0/8', localIntf=None):
     subnet: Mininet subnet (default 10.0/8)"""
 
     # Identify the interface connecting to the mininet network
-    if localIntf == None:
+    if localIntf is None:
         localIntf = root.defaultIntf()
 
     # Flush any currently active rules
